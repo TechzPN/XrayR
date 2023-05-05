@@ -131,8 +131,8 @@ Nodes:
       CertConfig:
         CertMode: http
         CertDomain: "$CertDomain80" 
-        CertFile: /etc/XrayR/cert/baosport.crt 
-        KeyFile: /etc/XrayR/cert/baosport.key
+        CertFile: /etc/XrayR/cert/5gsieuviet.crt 
+        KeyFile: /etc/XrayR/cert/5gsieuviet.key
         Provider: alidns 
         Email: test@me.com
         DNSEnv: 
@@ -169,8 +169,8 @@ Nodes:
       CertConfig:
         CertMode: file 
         CertDomain: "$CertDomain443"
-        CertFile: /etc/XrayR/cert/baosport.crt 
-        KeyFile: /etc/XrayR/cert/baosport.key
+        CertFile: /etc/XrayR/cert/5gsieuviet.crt 
+        KeyFile: /etc/XrayR/cert/5gsieuviet.key
         Provider: cloudflare 
         Email: test@me.com
         DNSEnv: 
