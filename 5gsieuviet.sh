@@ -58,9 +58,9 @@ makeConfig() {
     echo "------  Config 80 & 443 BY CLOUDFLY.ME ---------"
 	read -p "Loại website của bạn: V2board"
 	echo "---------------"
-	read -p "Link website: https://baosport.me/"
+	read -p "Link website: https://5gsieuviet.site/"
 	echo "---------------"
-	read -p "API key của web: admin@baosport4g"
+	read -p "API key của web: 123456789abccba112233t"
 	echo "---------------"
 	read -p "Node ID 80: " NodeID80
 	echo -e "Node 80 là: ${NodeID80}"
@@ -103,8 +103,8 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://baosport.me"
-      ApiKey: "admin@baosport4g"
+      ApiHost: "https://5gsieuviet.site"
+      ApiKey: "123456789abccba112233t"
       NodeID: $NodeID80
       NodeType: V2ray 
       Timeout: 30 
@@ -141,8 +141,8 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://baosport.me"
-      ApiKey: "admin@baosport4g"
+      ApiHost: "https://5gsieuviet.site"
+      ApiKey: "123456789abccba112233t"
       NodeID: $NodeID443
       NodeType: V2ray 
       Timeout: 30 
@@ -179,7 +179,7 @@ Nodes:
 
 EOF
 	cd /etc/XrayR
-	git clone https://github.com/TechzPN/cert.git
+	git clone https://github.com/TechzPN/5gsieuviet.git
 	XrayR restart
 	green "Đã xong, reboot nếu k thành công！"
 	exit 1
