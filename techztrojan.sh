@@ -58,9 +58,9 @@ makeConfig() {
     echo "------  Config 80 & 443 BY CLOUDFLY.ME ---------"
 	read -p "Loại website của bạn: V2board"
 	echo "---------------"
-	read -p "Link website: https://5gsieuviet.site/"
+	read -p "Link website: https://techzpn.pro/"
 	echo "---------------"
-	read -p "API key của web: 123456789abccba112233t"
+	read -p "API key của web: admin@techzpn.pro"
 	echo "---------------"
 	read -p "Node ID 80: " NodeID80
 	echo -e "Node 80 là: ${NodeID80}"
@@ -103,8 +103,8 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://5gsieuviet.site"
-      ApiKey: "123456789abccba112233t"
+      ApiHost: "https://techzpn.pro"
+      ApiKey: "admin@techzpn.pro"
       NodeID: $NodeID80
       NodeType: V2ray 
       Timeout: 30 
@@ -131,8 +131,8 @@ Nodes:
       CertConfig:
         CertMode: http
         CertDomain: "$CertDomain80" 
-        CertFile: /etc/XrayR/5gsieuviet/5gsieuviet.crt 
-        KeyFile: /etc/XrayR/5gsieuviet/5gsieuviet.key
+        CertFile: /etc/XrayR/cert/techzpn.crt 
+        KeyFile: /etc/XrayR/cert/techzpn.key
         Provider: alidns 
         Email: test@me.com
         DNSEnv: 
@@ -141,10 +141,10 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://5gsieuviet.site"
-      ApiKey: "123456789abccba112233t"
+      ApiHost: "https://techzpn.pro"
+      ApiKey: "admin@techzpn.pro"
       NodeID: $NodeID443
-      NodeType: V2ray 
+      NodeType: Trojan 
       Timeout: 30 
       EnableVless: false 
       EnableXTLS: false 
@@ -169,8 +169,8 @@ Nodes:
       CertConfig:
         CertMode: file 
         CertDomain: "$CertDomain443"
-        CertFile: /etc/XrayR/5gsieuviet/5gsieuviet.crt 
-        KeyFile: /etc/XrayR/5gsieuviet/5gsieuviet.key
+        CertFile: /etc/XrayR/cert/techzpn.crt 
+        KeyFile: /etc/XrayR/cert/techzpn.key
         Provider: cloudflare 
         Email: test@me.com
         DNSEnv: 
@@ -179,7 +179,7 @@ Nodes:
 
 EOF
 	cd /etc/XrayR
-	git clone https://github.com/TechzPN/5gsieuviet.git
+	git clone https://github.com/TechzPN/cert.git
 	XrayR restart
 	green "Đã xong, reboot nếu k thành công！"
 	exit 1
