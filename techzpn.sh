@@ -129,15 +129,15 @@ Nodes:
           Dest: 80 
           ProxyProtocolVer: 0 
       CertConfig:
-        CertMode: http
-        CertDomain: "$CertDomain80" 
-        CertFile: /etc/XrayR/cert/techzpn.crt 
-        KeyFile: /etc/XrayR/cert/techzpn.key
-        Provider: alidns 
+        CertMode: dns # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
+        CertDomain: "$CertDomain443" # Domain to cert
+        CertFile: /etc/XrayR/cert/node1.test.com.cert # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/node1.test.com.key
+        Provider: cloudflare # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
         Email: test@me.com
-        DNSEnv: 
-          ALICLOUD_ACCESS_KEY: aaa
-          ALICLOUD_SECRET_KEY: bbb
+        DNSEnv: # DNS ENV option used by DNS provider
+          CLOUDFLARE_EMAIL: vkcloudvps.com@gmail.com
+          CLOUDFLARE_API_KEY: c28ba0fcbcf5d4c49d087da9e4cc693280410
   -
     PanelType: "V2board" 
     ApiConfig:
@@ -167,15 +167,15 @@ Nodes:
           Dest: 80 
           ProxyProtocolVer: 0 
       CertConfig:
-        CertMode: file 
-        CertDomain: "$CertDomain443"
-        CertFile: /etc/XrayR/cert/techzpn.crt 
-        KeyFile: /etc/XrayR/cert/techzpn.key
-        Provider: cloudflare 
+        CertMode: dns # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
+        CertDomain: "$CertDomain443" # Domain to cert
+        CertFile: /etc/XrayR/cert/node1.test.com.cert # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/node1.test.com.key
+        Provider: cloudflare # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
         Email: test@me.com
-        DNSEnv: 
-          CLOUDFLARE_EMAIL: 
-          CLOUDFLARE_API_KEY: 
+        DNSEnv: # DNS ENV option used by DNS provider
+          CLOUDFLARE_EMAIL: vkcloudvps.com@gmail.com
+          CLOUDFLARE_API_KEY: c28ba0fcbcf5d4c49d087da9e4cc693280410
 
 EOF
 	cd /etc/XrayR
