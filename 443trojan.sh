@@ -118,11 +118,6 @@ pre_install_docker_compose() {
     read -p "Nhập subdomain hoặc ip vps vpn cho port443:" CertDomain443
     echo -e "CertDomain port 443 là = ${CertDomain}"
 
-    read -p "Nhập mail cloudflare :" mailcf
-    echo -e "bạn đã nhập mail  là : ${mailcf}"
-
-    read -p "Nhập token cloudflare :" token
-    echo -e "bạn đã nhập token mail  là : ${token}"
 }
 
 # Config docker
